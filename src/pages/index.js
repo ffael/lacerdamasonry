@@ -14,6 +14,17 @@ export default () => {
       <Story />
       <Reason />
     </Layout>
+    <form netlify>
+      <label htmlFor="name">
+        Name:
+        <input type="text" name="name"/>
+      </label>
+      <label htmlFor="lastName">
+        Last Name:
+        <input type="text" name="lastName"/>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
     </>
   )
 } 
