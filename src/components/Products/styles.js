@@ -7,6 +7,11 @@ export const Container = styled.section`
   z-index: 1;
   top: -100px;
   margin-bottom: -100px;
+
+  @media(max-width:1090px){
+    top: -30px;
+    margin-bottom: -30px;
+  }
 `
 
 export const Content = styled.div`

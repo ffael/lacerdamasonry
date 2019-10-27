@@ -6,9 +6,12 @@ export const Container = styled.section`
   height: 700px;
   min-height: 500px;
   background-image: url(${props=>props.bg});
-  background-clip:border-box;
-  background-repeat: repeat-y;
   background-size: 100%;
+  justify-content: center;
+
+  @media(max-width:1090px){
+    background-size: auto 100%;
+  }
 `
 
 export const Content = styled.article`
@@ -18,9 +21,6 @@ export const Content = styled.article`
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-left: calc(15% + 1rem);
-  padding-right: calc(15% + 1rem);
-  user-select: none;
 
   h2{
     font-size: 4rem;
@@ -31,7 +31,6 @@ export const Content = styled.article`
 
   p{
     color: inherit;
-    /* width: 70%; */
     font-size: 1rem;
     line-height: 1.5rem;
     margin-bottom: 2.5rem;
