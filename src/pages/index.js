@@ -14,7 +14,7 @@ export default () => {
       <Story />
       <Reason />
     </Layout>
-    <form netlify>
+    <form name="contact" method="POST" data-netlify="true">
       <label htmlFor="name">
         Name:
         <input type="text" name="name"/>
