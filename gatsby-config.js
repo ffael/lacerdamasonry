@@ -6,6 +6,9 @@
 
 module.exports = {
   /* Your site config here */
+  siteMetadata:{
+    about: "We started our company back in 2009, serving New England with realible and competent masonry services (walkways, pavers, retaining wall, foundation work...). In 2019, we decided to provide our clients with quality products along with our services."
+  },
 
   plugins:[
     'gatsby-plugin-react-helmet',

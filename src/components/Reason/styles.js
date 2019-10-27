@@ -1,14 +1,74 @@
 import styled from 'styled-components'
 
 export const Container = styled.section`
+  user-select: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(${props=> props.bg});
+  background-position: 0 100%;
+  background-repeat: repeat-x;
 
-  @media(max-width: 1090px){
+  @media(max-width:1090px){
     flex-direction: column;
   }
+`
 
+export const MiddleBox = styled.article`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  @media(max-width:1090px){
+    order: -1;
+    width: 100%;
+  }
+
+  svg{
+    width: 80px;
+  }
+
+  h1{
+    font-size: 2em;
+    border: none;
+  }
+
+  article{
+    flex-direction: column;
+
+    p{
+      margin: 30px 0;
+      background: #fff;
+    }
+    a{
+      background: #fff;
+      border: none;
+    }
+  }
+`
+
+export const Box = styled.article`
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex: 1;
+  padding: 0 10px;
+
+  ul{
+    margin: 0;
+    li{
+      background: #fff;
+      padding: 20px;
+      h3{
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+      p{
+        font-size: 0.777rem;
+      }
+    }
+  }
 `
 
 export const Title = styled.h1`
@@ -21,14 +81,14 @@ export const Title = styled.h1`
 
 export const Content = styled.article`
   display: flex;
+  /* flex-direction: column; */
   justify-content: center;
   align-items: center;
   padding: 0 5%;
 
   p{
-    margin-right: 20px;
-    margin-bottom: 0;
-    flex: 1;
+    margin: 0;
+    width: 85%;
   }
 
   a{
@@ -67,15 +127,6 @@ export const Content = styled.article`
         color: #fff;
         transform: translateY(0);
       }
-    }
-  }
-
-  @media(max-width: 1090px){
-    flex-direction: column;
-    
-    p{
-      margin: 20px 0;
-      text-align: center;
     }
   }
 `

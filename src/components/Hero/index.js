@@ -19,10 +19,10 @@ const Hero = () =>{
   `)
   return(
     <>
-      <Container bg={data.file.childImageSharp.fluid.src} >
+      <Container bg={data.file.childImageSharp.fluid.src} className="grid">
         <Content className="content" text="See Our Entire Catalog">
-          <h2>Landscape Supplies & Materials</h2>
-          <p>We count with a extense variaty of high quality supplies and materials for your project. </p>
+          <h2>Supplies & Materials</h2>
+          <p>We count with an extense variety of high quality supplies and materials for your project. </p>
           <Link to="/" className="button--main">See Our Entire Catalog</Link>
         </Content>
       </Container>

@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import Layout from '../layouts'
 import Products from '../components/Products'
 import Story from '../components/Story'
+import Reason from '../components/Reason'
 
 export default () => {
   return(
@@ -11,6 +12,7 @@ export default () => {
     <Layout>
       <Products/>
       <Story />
+      <Reason />
     </Layout>
     </>
   )

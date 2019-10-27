@@ -4,7 +4,15 @@ export default createGlobalStyle`
   /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
     
   @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+  @font-face {
+    font-family: 'slingbold';
+    src: url('../assets/fonts/SlingBold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
   .grid{
     padding-left: calc(5% + 1rem);
     padding-right: calc(5% + 1rem);
@@ -23,8 +31,9 @@ export default createGlobalStyle`
   }
 
   *{
-    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Raleway', sans-serif !important;
     color: #132554;
+    user-select: none;
   }
   html {
   -ms-text-size-adjust: 100%;
