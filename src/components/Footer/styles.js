@@ -122,4 +122,9 @@ export const Social = styled.article`
     justify-content: space-around;
     flex: 1;
   }
+  @media(max-width: 650px){
+    div{
+      width: 100%;
+    }
+  }
 `
