@@ -15,15 +15,19 @@ export const Container = styled.section`
 `
 
 export const Content = styled.article`
+  @media(max-width:1090px){
+    font-size: 12px;
+  }
   display: flex;
   flex-direction: column;
   color: #fff;
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-size: 18px;
 
   h2{
-    font-size: 4rem;
+    font-size: 4em;
     text-transform: uppercase;
     background: #00A3DD;
     padding: 20px;
@@ -31,9 +35,9 @@ export const Content = styled.article`
 
   p{
     color: inherit;
-    font-size: 1rem;
-    line-height: 1.5rem;
-    margin-bottom: 2.5rem;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin-bottom: 2.5em;
     background: #132554;
     padding: 20px;
   }

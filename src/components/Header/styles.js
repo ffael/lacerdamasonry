@@ -2,15 +2,15 @@ import styled from 'styled-components'
 
 export const Container = styled.header`
   user-select: none;
-  @media(max-width:1023px){
-    justify-content: center;
-  }
   display: flex;
   background: #f9f9f9;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
   justify-content: space-between;
+  @media(max-width:1023px){
+    justify-content: center;
+  }
 `
 
 export const Logo = styled.h1`
@@ -24,6 +24,9 @@ export const Logo = styled.h1`
 
   svg{
     margin-right: 10px;
+  }
+  @media(max-width:1023px){
+    font-size: 1.3rem;
   }
 `
 
