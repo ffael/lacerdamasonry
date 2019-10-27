@@ -115,7 +115,7 @@ export const Social = styled.article`
     }
   }
   div{
-    border-top: 1px solid #fff;
+    /* border-top: 1px solid #fff; */
     padding-top: 10px;
     width: 30%;
     display: flex;

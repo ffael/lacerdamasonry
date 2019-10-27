@@ -9,8 +9,7 @@ const Hero = () =>{
       file(name: {eq: "background"}) {
         childImageSharp{
             fluid(
-              maxWidth: 2000,
-              toFormat: WEBP){
+              maxWidth: 2000){
                 src
             }
           }
