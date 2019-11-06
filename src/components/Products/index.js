@@ -2,54 +2,50 @@ import React from 'react'
 
 import { Container, Content, CardContainer, CardContent, Card } from './styles'
 
-import { Link } from 'gatsby'
-
-import paver from '../../assets/img/paver.jpg'
-import mulch from '../../assets/img/mulch.jpg'
-import cobblestone from '../../assets/img/cobblestone.jpg'
-import retaining from '../../assets/img/retaining.jpg'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 
 const Products = () => {
+  const data = useStaticQuery(graphql`
+    query{
+      allContentfulProduct(limit: 4, filter: {homePageFeatured: {eq: true}}) {
+        edges {
+          node {
+            name
+            id
+            slug
+            homePageFeatured
+            description {
+              description
+            }
+            featuredImage {
+              file {
+                url
+              }
+            }
+          }
+        }
+      }
+    }
+  `)
   return(
     <>
       <Container className="grid">
         <Content>
           <CardContainer>
-            <Link to="/">
-              <Card>
-                <CardContent>
-                  <img src={paver} alt=""/>
-                  <p>Pavers</p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link to="/">
-              <Card>
-                <CardContent>
-                  <img src={mulch} alt=""/>
-                  <p>Mulch</p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link to="/">
-              <Card>
-                <CardContent>
-                  <img src={retaining} alt=""/>
-                  <p>Retaining Wall</p>
-                </CardContent>
-              </Card>
-            </Link>
-
-            <Link to="/">
-              <Card>
-                <CardContent>
-                  <img src={cobblestone} alt=""/>
-                  <p>Cobblestone</p>
-                </CardContent>
-              </Card>
-            </Link>
+          {data.allContentfulProduct.edges.map((edge)=> {
+            return(
+              <Link to={`/products/${edge.node.slug}`} key={edge.node.id} state={{
+                modal: true
+              }}>
+                <Card>
+                  <CardContent>
+                    <img src={`${edge.node.featuredImage.file.url}`} alt=""/>
+                    <p>{edge.node.name}</p>
+                  </CardContent>
+                </Card>
+              </Link>
+            )
+          })}
           </CardContainer>
         </Content>
       </Container>

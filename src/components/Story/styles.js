@@ -8,7 +8,6 @@ export const Container = styled.section`
   @media(max-width: 1090px){
     flex-direction: column;
   }
-
 `
 
 export const Title = styled.h1`
@@ -17,6 +16,13 @@ export const Title = styled.h1`
   margin: 0;
   padding-left: 10px;
   border-left: 15px solid #132554;
+  
+  @media(max-width: 1090px){
+    flex-direction: column;
+    text-align: center;
+    border-left: none;
+    border-bottom: 10px solid #132554;
+  }
 `
 
 export const Content = styled.article`
@@ -72,7 +78,6 @@ export const Content = styled.article`
 
   @media(max-width: 1090px){
     flex-direction: column;
-    
     p{
       margin: 20px 0;
       text-align: center;

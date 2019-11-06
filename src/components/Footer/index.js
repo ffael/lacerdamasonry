@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Box, Social } from './styles'
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
-import LogoIcon from '../SVG/logoIcon'
+// import LogoIcon from '../SVG/logoIcon'
 import {
   FaFacebook,
   FaInstagram,
@@ -22,6 +22,13 @@ const Footer = () => {
           about
         }
       }
+      allContentfulProduct(limit:4){
+        edges{
+          node{
+            name
+          }
+        }
+      }
     }
   `)
 
@@ -35,20 +42,13 @@ const Footer = () => {
       <Box>
         <h4><Link to="/products">Products</Link></h4>
         <ul>
+          {data.allContentfulProduct.edges.map((edge)=>{
+            return(
+              <li>{edge.node.name}</li>
+            )
+          })}
           <li>
-            <Link to="/">Mulch</Link>
-          </li>
-          <li>
-            <Link to="/">Pavers</Link>
-          </li>
-          <li>
-            <Link to="/">Sand</Link>
-          </li>
-          <li>
-            <Link to="/">Bricks</Link>
-          </li>
-          <li>
-            <Link to="/" className="all-button">See All</Link>
+            <Link to="/products" className="all-button">See All</Link>
           </li>
         </ul>
       </Box>
@@ -56,19 +56,19 @@ const Footer = () => {
         <h4><Link to="/services">Services</Link></h4>
         <ul>
           <li>
-            <Link to="/">Brick Stairs</Link>
+            Brick Stairs
           </li>
           <li>
-            <Link to="/">Patios & Walkways</Link>
+            Patios & Walkways
           </li>
           <li>
-            <Link to="/">Stone</Link>
+            Stone
           </li>
           <li>
-            <Link to="/">Driveways</Link>
+            Driveways
           </li>
           <li>
-            <Link to="/" className="all-button">See All</Link>
+            <Link to="/services" className="all-button">See All</Link>
           </li>
         </ul>
       </Box>
@@ -92,11 +92,11 @@ const Footer = () => {
         2019 - All Rights Reserved. Developed by <a href="https://www.tribeweb.io" rel="noopener noreferrer" target="_blank"> Tribeweb.io</a>
       </p>
       <div>
-        <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebook  size={20} fill={"#fff"}/></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><FaFacebookMessenger  size={20} fill={"#fff"}/></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} fill={"#fff"}/></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><FaYelp size={20} fill={"#fff"}/></a>
-        <a href="#" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} fill={"#fff"}/></a>
+        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaFacebook  size={20} fill={"#fff"}/></a>
+        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaFacebookMessenger  size={20} fill={"#fff"}/></a>
+        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} fill={"#fff"}/></a>
+        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaYelp size={20} fill={"#fff"}/></a>
+        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} fill={"#fff"}/></a>
       </div>
     </Social>
     </>

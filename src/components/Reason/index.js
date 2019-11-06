@@ -1,5 +1,5 @@
 import React from 'react'
-import {useStaticQuery, graphql, Link} from 'gatsby'
+import {useStaticQuery, graphql } from 'gatsby'
 import LogoIcon from '../SVG/logoIcon'
 import {
   MdThumbUp,
@@ -9,7 +9,7 @@ import {
 } from 'react-icons/md'
 
 // Styled Components
-import { Container, Title, Content, Box, MiddleBox } from './styles'
+import { Container, Title, Box, MiddleBox } from './styles'
 
 
 const Reason = () =>{
@@ -31,8 +31,8 @@ const Reason = () =>{
           <ul>
             <li>
               <MdThumbUp size={40} fill={"#00A3DD"} />
-              <h3>Years of Experience</h3>
-              <p>Lacerda Masonry has been around for 10 years, serving all around New England.</p>
+              <h3>Experience</h3>
+              <p>Lacerda Masonry has been around for over 10 years, serving all around New England.</p>
             </li>
             <li>
               <MdVerifiedUser size={40} fill={"#00A3DD"}/>
@@ -45,10 +45,10 @@ const Reason = () =>{
         <MiddleBox>
           <LogoIcon />
           <Title>Why Choose Lacerda</Title>
-          <Content>
+          {/* <Content>
             <p>Some reasons why to choose our services and products.</p>
-            {/* <Link to="/" >See More</Link> */}
-          </Content>
+            <Link to="/" >See More</Link>
+          </Content> */}
         </MiddleBox>
           
         <Box>
@@ -61,7 +61,7 @@ const Reason = () =>{
             <li>
               <MdAttachMoney size={40} fill={"#00A3DD"} />
               <h3>Best Prices</h3>
-              <p>Best quality in products and services for the best price out there.</p>
+              <p>Best quality in products and services for the best price in the market.</p>
             </li>
           </ul>
         </Box>

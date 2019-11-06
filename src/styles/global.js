@@ -12,7 +12,46 @@ export default createGlobalStyle`
     font-weight: normal;
     font-style: normal;
 
-}
+  }
+/* Carousel Styles */
+/* Make sure to add !important to overwrite default styles */
+  .slider-control-centerleft,
+  .slider-control-centerright{
+      display: none !important;
+  }
+/* Modal Styles  */
+/* Make sure to add !important to overwrite default styles */
+  .ReactModal__Overlay{
+    background: rgba(19,37,84,0.3) !important;
+    z-index: 9999 !important;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    &:hover{
+      cursor: default;
+    }
+  }
+  .ReactModal__Overlay--after-open{
+    opacity: 1;
+  }
+
+  .ReactModal__Overlay--before-close{
+    opacity: 0;
+  }
+
+  .ReactModal__Content{
+    margin: 0 auto;
+    border: none !important;
+    border-radius: 0 !important;
+    width: 50% !important;
+    &:hover{
+      cursor: default;
+    }
+
+    @media(max-width: 1000px){
+      margin: 0 auto;
+      width: 80% !important;
+    }
+  }
   .grid{
     padding-left: calc(5% + 1rem);
     padding-right: calc(5% + 1rem);
