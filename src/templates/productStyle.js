@@ -8,6 +8,7 @@ export const Container = styled.section`
 export const ContentWrapper = styled.article`
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 
   @media(max-width: 1000px){
     align-items: center;
@@ -23,6 +24,12 @@ export const Content = styled.div`
   width: 45%;
   padding-bottom: 30px;
   flex-direction: column;
+
+  p{
+    overflow: scroll;
+    scroll-behavior:smooth;
+    max-height: 300px;
+  }
   
   @media(max-width: 1000px){
     width: 100%;

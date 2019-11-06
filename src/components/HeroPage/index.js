@@ -1,26 +1,43 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { Container, Content } from './styles'
+import { PageContext } from '../Context'
 
 const Hero = () =>{
+  const context = useContext(PageContext)
+  let bg
   const data = useStaticQuery(graphql`
-    query{
-      file(name: {eq: "products"}) {
-        childImageSharp{
-            fluid(
-              maxWidth: 2000){
+    query {
+      allFile {
+        edges {
+          node {
+            name
+            childImageSharp {
+              fluid(
+              maxWidth: 2000) {
                 src
+              }
             }
           }
         }
+      }
     }
   `)
+
+  data.allFile.edges.map((edge)=>{
+    if(edge.node.name === context.fileName ){
+      return(
+        bg = edge.node.childImageSharp.fluid.src
+      )
+    }
+  })
+
   return(
     <>
-      <Container bg={data.file.childImageSharp.fluid.src} className="grid">
-        <Content text="See Our Entire Catalog">
-          <h2>Products</h2>
+      <Container bg={bg} className="grid">
+        <Content>
+          <h2>{context.title}</h2>
         </Content>
       </Container>
     </>

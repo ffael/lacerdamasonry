@@ -4,14 +4,17 @@ import { Helmet } from 'react-helmet'
 import Layout from '../layouts/pageLayout'
 import Products from '../components/ProductsContent'
 
+import { PageContext } from '../components/Context'
+
 const ProductsPage = () =>{
+
   return(
-    <>
-    <Helmet title="Products" />
-    <Layout>
-      <Products />
-    </Layout>
-    </>
+    <PageContext.Provider value={{title:"Products", fileName:"products"}}>
+      <Helmet title="Products" />
+      <Layout>
+        <Products />
+      </Layout>
+    </PageContext.Provider>
   )
 }
 

@@ -30,7 +30,7 @@ const Story = () =>{
         <Title>Our Story</Title>
         <Content>
           <p>{data.site.siteMetadata.about}</p>
-          <Link to="/" >See More</Link>
+          <Link to="/about" >See More</Link>
         </Content>
       </Container>
     </>

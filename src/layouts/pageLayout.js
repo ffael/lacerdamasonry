@@ -9,7 +9,7 @@ const Layout = ({children}) =>{
     <>
       <GlobalStyles />
       <Header />
-      <Hero />
+      <Hero/>
       <main className="grid">
         {children}
       </main>
