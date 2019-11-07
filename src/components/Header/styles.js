@@ -8,9 +8,71 @@ export const Container = styled.header`
   padding-top: 20px;
   padding-bottom: 20px;
   justify-content: space-between;
+  position: relative;
+  z-index: 2;
+
   @media(max-width:1023px){
     justify-content: center;
   }
+`
+export const MobileContainer = styled.div`
+  display: none;
+
+  @media(max-width:1023px){
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    div{
+      background: #132554;
+      padding: 10px 0;
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+    
+    ul{
+      display: flex;
+      margin: 0;
+      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      li{
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        a{
+          display: block;
+          height: 100%;
+          padding-top:20px;
+          padding-bottom:20px;
+          color: #fff;
+          text-decoration: none;
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: bold;
+          font-size: 0.722rem;
+          transition: all 0.3s ease;
+
+          &:hover{
+            color: #00A3DD;
+          }
+        }
+      }
+    }
+  }
+`
+
+export const MobileNav = styled.nav`
+  position: relative;
+  margin-top: ${props=> props.open ? "0" : "-310px"};
+  width: 100%;
+  background: #132554;
+  transition: all 0.3s ease;
 `
 
 export const Logo = styled.h1`

@@ -26,7 +26,9 @@ const Hero = () =>{
   `)
 
   data.allFile.edges.map((edge)=>{
-    if(edge.node.name === context.fileName ){
+    if(edge.node.name !== context.fileName ){
+     return
+    }else{
       return(
         bg = edge.node.childImageSharp.fluid.src
       )
