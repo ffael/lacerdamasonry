@@ -17,9 +17,9 @@ const Story = () =>{
           }
         }
       }
-      site{
-        siteMetadata{
-          about
+      contentfulAbout {
+        companyStory {
+          companyStory
         }
       }
     }
@@ -29,7 +29,7 @@ const Story = () =>{
       <Container className="grid section-xl" bg={data.file.childImageSharp.fluid.src}>
         <Title>Our Story</Title>
         <Content>
-          <p>{data.site.siteMetadata.about}</p>
+          <p>{data.contentfulAbout.companyStory.companyStory}</p>
           <Link to="/about" >See More</Link>
         </Content>
       </Container>
