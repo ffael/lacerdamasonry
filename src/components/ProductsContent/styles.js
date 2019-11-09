@@ -2,7 +2,12 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   display: flex;
-  padding-bottom: 10%;
+  padding-top: 4.875rem;
+  padding-bottom: 4.875rem;
+
+  @media(max-width: 350px){
+    padding-top: 0;
+  }
 `
 
 export const Content = styled.div`
@@ -36,17 +41,46 @@ export const CardContainer = styled.article`
     grid-auto-columns: 1fr;
     grid-row-gap: 5%;
   }
-  
-  @media(max-width:745px){
+  @media(max-width:700px){
     display: flex;
     align-items: center;
     flex-direction: column;
+    
+    a{
+      display: flex;
+      width: 100%;
+    }
   }
 `
 
 export const Card = styled.div`
-  @media(max-width:745px){
+  @media(min-width: 350px) and (max-width:700px){
+    width: 100%;
+  }
+
+  @media(max-width:701px){
     margin-bottom: 30px;
+    max-width: 100%;
+    padding: 0 10px;
+
+    ::before{
+      content: "";
+    }
+  
+    &:hover{
+      transition: all 0.3s ease;
+
+      p{
+        color: #00A3DD;
+      }
+      ::before{
+        top:90%;
+      }
+    }
+  }
+
+  @media(max-width: 350px){
+    height: 100%;
   }
 
   display: flex;

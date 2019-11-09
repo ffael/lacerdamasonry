@@ -19,6 +19,17 @@ export default createGlobalStyle`
   .slider-control-centerright{
       display: none !important;
   }
+  .slider-control-bottomcenter{
+    @media(max-width:500px){
+      top: 105% !important;
+      width: 100% !important;
+    }
+  }
+  .slider{
+    @media(max-width:500px){
+      margin-bottom: 50px !important;
+    }
+  }
 /* Modal Styles  */
 /* Make sure to add !important to overwrite default styles */
   .ReactModal__Overlay{
@@ -43,6 +54,7 @@ export default createGlobalStyle`
     border: none !important;
     border-radius: 0 !important;
     width: 50% !important;
+    height: 100% !important;
     &:hover{
       cursor: default;
     }

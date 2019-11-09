@@ -28,7 +28,7 @@ const ProductsContent = () => {
   `)
   return(
     <>
-      <Container className="section-xl grid">
+      <Container className="grid">
         <Content>
           <CardContainer>
             {data.allContentfulProduct.edges.map((item)=>{

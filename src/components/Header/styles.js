@@ -17,7 +17,6 @@ export const Container = styled.header`
 `
 export const MobileContainer = styled.div`
   display: none;
-
   @media(max-width:1023px){
     display: flex;
     flex-direction: column;
@@ -69,7 +68,7 @@ export const MobileContainer = styled.div`
 
 export const MobileNav = styled.nav`
   position: relative;
-  margin-top: ${props=> props.open ? "0" : "-310px"};
+  margin-top: ${props=> props.open ? "0" : "-300px"};
   width: 100%;
   background: #132554;
   transition: all 0.3s ease;
