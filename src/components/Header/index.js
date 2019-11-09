@@ -15,7 +15,9 @@ const Header = () =>{
   return(
     <>
       <Container className="grid">
-        <Logo className="logo"><LogoIcon className="logoIcon"/>Lacerda Masonry</Logo>
+        <Link to="/">
+          <Logo className="logo"><LogoIcon className="logoIcon"/>Lacerda Masonry</Logo>
+        </Link>
         <MainNav>
           <ul>
             <li><Link to="/" activeClassName="activePage">Home</Link></li>

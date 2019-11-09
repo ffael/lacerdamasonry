@@ -5,12 +5,20 @@ export const Container = styled.section`
   padding-bottom: 5%;
   position: relative;
   z-index: 1;
-  top: -100px;
-  margin-bottom: -100px;
+
+  padding-top: ${props => props.featured ? 0 : "4.875rem"};
+  padding-bottom: ${props => props.featured ? "50px" : "4.875rem"};
+
+  @media(max-width: 350px){
+    padding-top: 0;
+  }
+
+  top: ${props => props.featured ? "-100px": 0};
+  margin-bottom: ${props => props.featured ? "-100px": 0};
 
   @media(max-width:1090px){
-    top: -30px;
-    margin-bottom: -30px;
+    top: ${props => props.featured ? "-30px": 0};
+    margin-bottom: ${props => props.featured ? "-30px": 0};
   }
 `
 
@@ -34,8 +42,10 @@ export const CardContainer = styled.article`
   grid-template-rows: 1fr;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1%;
+  grid-row-gap: 5%;
   width: 100%;
   justify-items: center;
+  margin-bottom: 30%;
   
   a{
     text-decoration: none;
@@ -43,6 +53,7 @@ export const CardContainer = styled.article`
 
   @media(max-width:1340px){
     grid-template-columns: repeat(3, 1fr);
+    grid-row-gap: 5%;
     a:last-child{
       display: none;
     }
@@ -99,7 +110,7 @@ export const Card = styled.div`
       color: #fff;
     }
     ::before{
-      top:73%;
+      top:78%;
     }
   }
   @media(min-width: 350px) and (max-width:700px){
@@ -122,7 +133,7 @@ export const Card = styled.div`
         color: #00A3DD;
       }
       ::before{
-        top:90%;
+        top:98%;
       }
     }
   }

@@ -2,7 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet'
 
 import Layout from '../layouts/pageLayout'
-import Products from '../components/ProductsContent'
+import Products from '../components/Products/productsPageContent'
 
 import { PageContext } from '../components/Context'
 

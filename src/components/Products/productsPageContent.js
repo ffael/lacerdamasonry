@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { Container, Content, CardContainer, CardContent, Card } from './styles'
+import { Container, Content, CardContainer, CardContent, Card } from '../Products/styles'
 
 import { Link, useStaticQuery, graphql } from 'gatsby'
 
 const ProductsContent = () => {
   const data = useStaticQuery(graphql`
     query{
-      allContentfulProduct(limit: 4){
+      allContentfulProduct{
         edges{ 
           node{
             slug
@@ -28,7 +28,7 @@ const ProductsContent = () => {
   `)
   return(
     <>
-      <Container className="grid">
+      <Container className="grid" featured={false}>
         <Content>
           <CardContainer>
             {data.allContentfulProduct.edges.map((item)=>{

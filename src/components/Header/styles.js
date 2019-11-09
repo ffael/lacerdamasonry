@@ -11,6 +11,10 @@ export const Container = styled.header`
   position: relative;
   z-index: 2;
 
+  a{
+    text-decoration: none;
+  }
+
   @media(max-width:1023px){
     justify-content: center;
   }
@@ -76,7 +80,6 @@ export const MobileNav = styled.nav`
 
 export const Logo = styled.h1`
   display: flex;
-  cursor: default;
   align-content: center;
   line-height: 66px;
   font-size: 1.8rem;

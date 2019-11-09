@@ -5,6 +5,7 @@ import { Container, Content, CardContainer, CardContent, Card } from './styles'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
 const Products = () => {
+
   const data = useStaticQuery(graphql`
     query{
       allContentfulProduct(limit: 4, filter: {homePageFeatured: {eq: true}}) {
@@ -29,7 +30,7 @@ const Products = () => {
   `)
   return(
     <>
-      <Container className="grid">
+      <Container className="grid" featured={true}>
         <Content>
           <CardContainer>
           {data.allContentfulProduct.edges.map((edge)=> {

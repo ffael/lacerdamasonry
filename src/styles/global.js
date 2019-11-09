@@ -3,16 +3,9 @@ import { createGlobalStyle } from 'styled-components'
 export default createGlobalStyle`
   /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
     
-  @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+  /* @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap'); */
   @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
-  @font-face {
-    font-family: 'slingbold';
-    src: url('../assets/fonts/SlingBold-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-  }
 /* Carousel Styles */
 /* Make sure to add !important to overwrite default styles */
   .slider-control-centerleft,
@@ -54,7 +47,7 @@ export default createGlobalStyle`
     border: none !important;
     border-radius: 0 !important;
     width: 50% !important;
-    height: 100% !important;
+    align-items: center;
     &:hover{
       cursor: default;
     }
