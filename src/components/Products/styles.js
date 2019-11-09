@@ -41,11 +41,10 @@ export const CardContainer = styled.article`
   display: grid;
   grid-template-rows: 1fr;
   grid-template-columns: repeat(4, 1fr);
-  grid-column-gap: 1%;
+  grid-column-gap: 5%;
   grid-row-gap: 5%;
   width: 100%;
   justify-items: center;
-  margin-bottom: 30%;
   
   a{
     text-decoration: none;

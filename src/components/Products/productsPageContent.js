@@ -29,7 +29,7 @@ const ProductsContent = () => {
   return(
     <>
       <Container className="grid" featured={false}>
-        <Content>
+        <Content style={{marginBottom: "30%"}}>
           <CardContainer>
             {data.allContentfulProduct.edges.map((item)=>{
               return(
