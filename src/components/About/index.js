@@ -2,7 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Img from 'gatsby-image'
 
-import FounderPic from '../../assets/img/founder@2x.png'
 import { Container, Card, ProfileContainer } from './styles'
 
 const About = () =>{
@@ -20,11 +19,8 @@ const About = () =>{
         }
       }
       contentfulAsset(title: {eq: "founder"}) {
-        fixed(width: 500, height: 400, cropFocus: FACE) {
+        fixed(width: 300, height: 400, cropFocus: CENTER) {
           ...GatsbyContentfulFixed
-        }
-        fluid(maxWidth: 400) {
-          ...GatsbyContentfulFluid
         }
       }
     }
@@ -44,7 +40,7 @@ const About = () =>{
       </Container>
       <Container className="grid section">
         <ProfileContainer>
-          <Img fixed={data.contentfulAsset.fixed} />
+          <Img fixed={data.contentfulAsset.fixed} style={{maxWidth: 400}}/>
           <Card>
             <h3>Fabio Lacerda</h3>
             <strong>Founder & Owner</strong>
