@@ -17,9 +17,9 @@ const Story = () =>{
           }
         }
       }
-      contentfulAbout {
-        companyStory {
-          companyStory
+      contentfulAbout(title: {eq: "Story"}) {
+        description {
+          description
         }
       }
     }
@@ -29,7 +29,7 @@ const Story = () =>{
       <Container className="grid section-xl" bg={data.file.childImageSharp.fluid.src}>
         <Title>Our Story</Title>
         <Content>
-          <p>{data.contentfulAbout.companyStory.companyStory}</p>
+          <p>{data.contentfulAbout.description.description}</p>
           <Link to="/about" >See More</Link>
         </Content>
       </Container>

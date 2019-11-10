@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
 import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import Carousel from 'nuka-carousel'
 import { ModalRoutingContext } from 'gatsby-plugin-modal-routing'
@@ -8,21 +9,25 @@ import { Container, CloseButton, ContentWrapper, Content, ImageContainer } from 
 
 import { MdClose } from 'react-icons/md'
 
-// import Img from 'gatsby-image'
-
 export const query = graphql`
   query($slug: String!){
     contentfulProduct(slug: {eq: $slug}) {
       name
       slug
       gallery {
-        fixed {
-          src
+        fixed (width: 300) {
+          ...GatsbyContentfulFixed
+        }
+        fluid(maxWidth: 300){
+          ...GatsbyContentfulFluid
         }
       }
       featuredImage {
-        fixed {
-          src
+        fixed (width: 300) {
+          ...GatsbyContentfulFixed
+        }
+        fluid(maxWidth: 200){
+          ...GatsbyContentfulFluid
         }
       }
       description {
@@ -49,7 +54,7 @@ const ProductDetail = (props) =>{
       <Carousel {...settings}>
         {props.data.contentfulProduct.gallery.map((item)=>{
           return(
-            <img src={item.fixed.src} alt="" />
+            <Img fixed={item.fixed} fluid={item.fluid} alt="" />
           )
         })}
       </Carousel>
@@ -59,7 +64,7 @@ const ProductDetail = (props) =>{
   function handleFeaturedImage(){
     return(
       <ImageContainer>
-        <img src={props.data.contentfulProduct.featuredImage.fixed.src} alt=""/>
+        <Img fixed={props.data.contentfulProduct.featuredImage.fixed} fluid={props.data.contentfulProduct.featuredImage.fluid} alt=""/>
       </ImageContainer>
     )
   }

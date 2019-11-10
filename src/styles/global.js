@@ -60,6 +60,11 @@ export default createGlobalStyle`
   .grid{
     padding-left: calc(5% + 1rem);
     padding-right: calc(5% + 1rem);
+
+    @media(max-width: 700px){
+      padding-left: 1%;
+      padding-right: 1%;
+    }
   }
   .content{
     padding-left: calc(8% + 1rem);

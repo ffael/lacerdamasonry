@@ -17,7 +17,7 @@ export const ContentWrapper = styled.article`
 `
 
 export const ImageContainer = styled.picture`
-  max-width: 50%;
+  width: 50%;
 `
 export const Content = styled.div`
   display: flex;

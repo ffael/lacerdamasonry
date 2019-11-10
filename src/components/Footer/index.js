@@ -92,11 +92,11 @@ const Footer = () => {
         2019 - All Rights Reserved. Developed by <a href="https://www.tribeweb.io" rel="noopener noreferrer" target="_blank"> Tribeweb.io</a>
       </p>
       <div>
-        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaFacebook  size={20} fill={"#fff"}/></a>
-        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaFacebookMessenger  size={20} fill={"#fff"}/></a>
-        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} fill={"#fff"}/></a>
-        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaYelp size={20} fill={"#fff"}/></a>
-        <a href="http://www.google.com" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} fill={"#fff"}/></a>
+        <a href="https://www.facebook.com/Lacerda-Masonry-Company-Inc-Masonry-and-Landscape-supplier-103756151010629/" target="_blank" rel="noopener noreferrer"><FaFacebook  size={20} fill={"#fff"}/></a>
+        <a href="https://m.me/103756151010629" target="_blank" rel="noopener noreferrer"><FaFacebookMessenger  size={20} fill={"#fff"}/></a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} fill={"#fff"}/></a>
+        <a href="https://www.yelp.com/" target="_blank" rel="noopener noreferrer"><FaYelp size={20} fill={"#fff"}/></a>
+        <a href="https://www.whatsapp.com/business/" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} fill={"#fff"}/></a>
       </div>
     </Social>
     </>

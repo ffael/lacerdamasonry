@@ -20,9 +20,11 @@ export const MiddleBox = styled.article`
   align-items: center;
   text-align: center;
   flex: 1;
+
   @media(max-width:1090px){
     order: -1;
     width: 100%;
+    margin-bottom: 30px;
   }
 
   svg{

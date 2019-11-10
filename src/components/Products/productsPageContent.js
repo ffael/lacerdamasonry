@@ -3,6 +3,7 @@ import React from 'react'
 import { Container, Content, CardContainer, CardContent, Card } from '../Products/styles'
 
 import { Link, useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 const ProductsContent = () => {
   const data = useStaticQuery(graphql`
@@ -13,12 +14,9 @@ const ProductsContent = () => {
             slug
             name
             id
-            featuredImage{
-              file{
-                url
-              }
-              fixed{
-                src
+            featuredImage {
+              fixed(width: 230){
+                ...GatsbyContentfulFixed
               }
             }
           }
@@ -31,15 +29,15 @@ const ProductsContent = () => {
       <Container className="grid" featured={false}>
         <Content style={{marginBottom: "30%"}}>
           <CardContainer>
-            {data.allContentfulProduct.edges.map((item)=>{
+            {data.allContentfulProduct.edges.map((edge)=>{
               return(
-                <Link to={`/products/${item.node.slug}`} state={{
+                <Link to={`/products/${edge.node.slug}`} state={{
                   modal: true
-                }} key={item.node.id}>
+                }} key={edge.node.id}>
                   <Card>
                     <CardContent>
-                      <img src={item.node.featuredImage.file.url} alt={item.node.name}/>
-                      <p>{item.node.name}</p>
+                      <Img fixed={edge.node.featuredImage.fixed} alt={edge.node.name}/>
+                      <p>{edge.node.name}</p>
                     </CardContent>
                   </Card>
                 </Link>

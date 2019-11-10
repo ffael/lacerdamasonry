@@ -63,7 +63,7 @@ export const CardContainer = styled.article`
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 5%;
     a:last-child{
-      display: block;
+      display: flex;
     }
   }
   
@@ -75,6 +75,7 @@ export const CardContainer = styled.article`
     a{
       display: flex;
       width: 100%;
+      justify-content: center;
     }
   }
 `
@@ -94,7 +95,7 @@ export const Card = styled.div`
     content: "";
     top: 100%;
     left: 0;
-    height: 80px;
+    height: 100px;
     width: 100%;
     position: absolute;
     background: #00A3DD;
@@ -106,10 +107,12 @@ export const Card = styled.div`
     transition: all 0.3s ease;
 
     p{
+      z-index: 12;
       color: #fff;
     }
     ::before{
-      top:78%;
+      z-index: 11;
+      top:70%;
     }
   }
   @media(min-width: 350px) and (max-width:700px){
@@ -142,10 +145,6 @@ export const Card = styled.div`
   }
 `
 export const CardContent = styled.div`
-  @media(min-width: 350px) and (max-width:700px){
-    justify-content: space-around;
-    width: 100%;
-  }
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -163,21 +162,27 @@ export const CardContent = styled.div`
     margin-bottom: 0;
     bottom: 20px;
   }
+  @media(min-width: 350px) and (max-width:700px){
+    justify-content: space-around;
+    width: 100%;
+  }
+
   @media(max-width: 350px){
     flex-direction: column;
     max-height: 200px;
     width: 100%;
+    align-items: center;
     justify-content: space-between;
 
+
     p{
-      padding: 20px;
-      text-align: right;
+      margin-top: 30px;
     }
 
-    img{
+    /* img{
       max-width: 150px !important;
       max-height: 150px !important;
-      margin: 0;  
-    } 
+      margin: 0;
+    }  */
   }
 `
