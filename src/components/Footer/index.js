@@ -29,6 +29,13 @@ const Footer = () => {
           }
         }
       }
+      allContentfulServices(limit:4){
+        edges{
+          node{
+            name
+          }
+        }
+      }
     }
   `)
 
@@ -55,18 +62,11 @@ const Footer = () => {
       <Box>
         <h4><Link to="/services">Services</Link></h4>
         <ul>
-          <li>
-            Brick Stairs
-          </li>
-          <li>
-            Patios & Walkways
-          </li>
-          <li>
-            Stone
-          </li>
-          <li>
-            Driveways
-          </li>
+          {data.allContentfulServices.edges.map((edge)=>{
+            return(
+              <li>{edge.node.name}</li>
+            )
+          })}
           <li>
             <Link to="/services" className="all-button">See All</Link>
           </li>

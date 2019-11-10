@@ -4,14 +4,13 @@ export const Container = styled.section`
   display: flex;
   flex-direction: column;
   @media(max-width: 700px){
-    padding-top: 0;
+    padding-top: 5px;
   }
 `
 
 export const Card = styled.article`
   display: flex;
   margin: 20px 0;
-  /* border: 1px solid #00A3DD; */
   padding: 40px;
   position: relative;
   left: 30;
@@ -23,6 +22,7 @@ export const Card = styled.article`
   @media(max-width: 1090px){
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 `
 
