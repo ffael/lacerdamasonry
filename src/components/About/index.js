@@ -40,7 +40,7 @@ const About = () =>{
       </Container>
       <Container className="grid section">
         <ProfileContainer>
-          <Img fixed={data.contentfulAsset.fixed} style={{maxWidth: 400}}/>
+          <Img fixed={data.contentfulAsset.fixed} style={{maxWidth: 500}}/>
           <Card>
             <h3>Fabio Lacerda</h3>
             <strong>Founder & Owner</strong>
