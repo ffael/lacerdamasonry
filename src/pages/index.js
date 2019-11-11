@@ -8,7 +8,7 @@ import Reason from '../components/Reason'
 export default () => {
   return(
     <>
-    <Helmet title="Home"/>
+    <Helmet title="Lacerda Masonry | Home"/>
     <Layout>
       <Products/>
       <Story />

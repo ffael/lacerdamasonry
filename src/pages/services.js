@@ -9,7 +9,7 @@ import Services from '../components/Services'
 const ServicesPage = () =>{
   return(
     <PageContext.Provider value={{title:"Services", fileName:"services"}}>
-      <Helmet title="Services" />
+      <Helmet title="Lacerda Masonry | Services" />
       <Layout>
         <Services />
       </Layout>

@@ -17,11 +17,6 @@ import {
 const Footer = () => {
   const data = useStaticQuery(graphql`
     query{
-      site {
-        siteMetadata {
-          about
-        }
-      }
       allContentfulProduct(limit:4){
         edges{
           node{
@@ -36,6 +31,11 @@ const Footer = () => {
           }
         }
       }
+      contentfulAbout(slug: {eq: "story"}) {
+        description {
+          description
+        }
+      }
     }
   `)
 
@@ -44,7 +44,7 @@ const Footer = () => {
     <Container className="section-xl grid">
       <Box>
         <h4><Link to="/about">Our Company</Link></h4>
-        <p>{data.site.siteMetadata.about}</p>
+        <p>{data.contentfulAbout.description.description}</p>
       </Box>
       <Box>
         <h4><Link to="/products">Products</Link></h4>
@@ -92,11 +92,11 @@ const Footer = () => {
         2019 - All Rights Reserved. Developed by <a href="https://www.tribeweb.io" rel="noopener noreferrer" target="_blank"> Tribeweb.io</a>
       </p>
       <div>
-        <a href="https://www.facebook.com/Lacerda-Masonry-Company-Inc-Masonry-and-Landscape-supplier-103756151010629/" target="_blank" rel="noopener noreferrer"><FaFacebook  size={20} fill={"#fff"}/></a>
-        <a href="https://m.me/103756151010629" target="_blank" rel="noopener noreferrer"><FaFacebookMessenger  size={20} fill={"#fff"}/></a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} fill={"#fff"}/></a>
-        <a href="https://www.yelp.com/" target="_blank" rel="noopener noreferrer"><FaYelp size={20} fill={"#fff"}/></a>
-        <a href="https://www.whatsapp.com/business/" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} fill={"#fff"}/></a>
+        <a href="https://www.facebook.com/Lacerda-Masonry-Company-Inc-Masonry-and-Landscape-supplier-103756151010629/" aria-label="Check our Facebook Page" target="_blank" rel="noopener noreferrer"><FaFacebook  size={20} fill={"#fff"}/></a>
+        <a href="https://m.me/103756151010629" aria-label="Send us a message on Facebook Messenger" target="_blank" rel="noopener noreferrer"><FaFacebookMessenger  size={20} fill={"#fff"}/></a>
+        <a href="https://www.instagram.com/" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} fill={"#fff"}/></a>
+        <a href="https://www.yelp.com/" aria-label="Rate us on Yelp" target="_blank" rel="noopener noreferrer"><FaYelp size={20} fill={"#fff"}/></a>
+        <a href="https://www.whatsapp.com/business/" aria-label="Get in touch with us on WhatsApp Business" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} fill={"#fff"}/></a>
       </div>
     </Social>
     </>

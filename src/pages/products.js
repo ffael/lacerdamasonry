@@ -10,7 +10,7 @@ const ProductsPage = () =>{
 
   return(
     <PageContext.Provider value={{title:"Products", fileName:"products"}}>
-      <Helmet title="Products" />
+      <Helmet title="Lacerda Masonry | Products" />
       <Layout>
         <Products />
       </Layout>

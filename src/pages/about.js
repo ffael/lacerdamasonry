@@ -9,7 +9,7 @@ import About from '../components/About'
 const AboutPage = () =>{
   return(
     <PageContext.Provider value={{title:"About", fileName:"about"}}>
-      <Helmet title="About" />
+      <Helmet title="Lacerda Masonry | About" />
       <Layout>
         <About />
       </Layout>
