@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: 300px;
   background-image: url(${props=>props.bg});
   background-size: 100%;
