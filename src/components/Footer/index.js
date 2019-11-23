@@ -76,14 +76,14 @@ const Footer = () => {
         <h4>Information</h4>
         <ul>
           <li>
-            <FaMapMarkerAlt fill={"#fff"}/> <span>24 Beaulieu Street, Lowell, 01850</span>
+            <FaMapMarkerAlt fill={"#fff"}/> <span>121 Tanner St, Lowell, 01850</span>
           </li>
           <li>
-            <FaPhone fill={"#fff"}/> <a href="tel:9785965350"><span>(978)596-5350</span></a>
+            <FaPhone fill={"#fff"}/> <a href="tel:9789963203"><span>(978) 996-3203</span></a>
           </li>
-          <li>
+          {/* <li>
             <FaEnvelopeOpenText fill={"#fff"}/> <a href="mailto:contact@lacerdamasonry.com"><span>contact@lacerdamasonry.com</span></a>
-          </li>
+          </li> */}
         </ul>
       </Box>
     </Container>
@@ -94,8 +94,8 @@ const Footer = () => {
       <div>
         <a href="https://www.facebook.com/Lacerda-Masonry-Company-Inc-Masonry-and-Landscape-supplier-103756151010629/" aria-label="Check our Facebook Page" target="_blank" rel="noopener noreferrer"><FaFacebook  size={20} fill={"#fff"}/></a>
         <a href="https://m.me/103756151010629" aria-label="Send us a message on Facebook Messenger" target="_blank" rel="noopener noreferrer"><FaFacebookMessenger  size={20} fill={"#fff"}/></a>
-        <a href="https://www.instagram.com/" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} fill={"#fff"}/></a>
-        <a href="https://www.yelp.com/" aria-label="Rate us on Yelp" target="_blank" rel="noopener noreferrer"><FaYelp size={20} fill={"#fff"}/></a>
+        {/* <a href="https://www.instagram.com/" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} fill={"#fff"}/></a> */}
+        {/* <a href="https://www.yelp.com/" aria-label="Rate us on Yelp" target="_blank" rel="noopener noreferrer"><FaYelp size={20} fill={"#fff"}/></a> */}
         <a href="https://www.whatsapp.com/business/" aria-label="Get in touch with us on WhatsApp Business" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} fill={"#fff"}/></a>
       </div>
     </Social>

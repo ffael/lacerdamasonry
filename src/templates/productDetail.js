@@ -87,7 +87,7 @@ const ProductDetail = (props) =>{
               <Content>
                 <h1>{props.data.contentfulProduct.name}</h1>
                 <p dangerouslySetInnerHTML={{__html:props.data.contentfulProduct.description.description}}></p>
-                <a href="tel:+9785965350">Order Now</a>
+                <a href="tel:+9789963203">Order Now</a>
               </Content>
             </ContentWrapper>
           </Container>

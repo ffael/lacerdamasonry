@@ -50,7 +50,7 @@ export const Content = styled.div`
     text-align: center;
 
     ::after{
-      content: "Order Now";
+      content: "(978) 996-3203";
       display: flex;
       align-items: center;
       justify-content: center;
