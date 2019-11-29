@@ -25,18 +25,18 @@ export const query = graphql`
       name
       slug
       gallery {
-        fixed (width: 300) {
+        fixed (width: 500) {
           ...GatsbyContentfulFixed
         }
-        fluid(maxWidth: 300){
+        fluid(maxWidth: 500){
           ...GatsbyContentfulFluid
         }
       }
       featuredImage {
-        fixed (width: 300) {
+        fixed (width: 500) {
           ...GatsbyContentfulFixed
         }
-        fluid(maxWidth: 200){
+        fluid(maxWidth: 500){
           ...GatsbyContentfulFluid
         }
       }

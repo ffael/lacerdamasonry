@@ -21,46 +21,23 @@ export const query = graphql`
         ...GatsbyContentfulFluid
       }
     }
-    contentfulProductsSubcategories(slug: {eq: $slug}) {
-      name
-      slug
-      gallery {
-        fixed (width: 300) {
-          ...GatsbyContentfulFixed
-        }
-        fluid(maxWidth: 300){
-          ...GatsbyContentfulFluid
-        }
-      }
-      featuredImage {
-        fixed (width: 300) {
-          ...GatsbyContentfulFixed
-        }
-        fluid(maxWidth: 200){
-          ...GatsbyContentfulFluid
-        }
-      }
-      description {
-        json
-      }
-    }
     
     contentfulProduct(slug: {eq: $slug}) {
       name
       slug
       gallery {
-        fixed (width: 300) {
+        fixed (width: 500) {
           ...GatsbyContentfulFixed
         }
-        fluid(maxWidth: 300){
+        fluid(maxWidth: 500){
           ...GatsbyContentfulFluid
         }
       }
       featuredImage {
-        fixed (width: 300) {
+        fixed (width: 500) {
           ...GatsbyContentfulFixed
         }
-        fluid(maxWidth: 200){
+        fluid(maxWidth: 500){
           ...GatsbyContentfulFluid
         }
       }
