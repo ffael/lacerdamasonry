@@ -44,30 +44,6 @@ export const query = graphql`
         json
       }
     }
-    
-    contentfulProduct(slug: {eq: $slug}) {
-      name
-      slug
-      gallery {
-        fixed (width: 300) {
-          ...GatsbyContentfulFixed
-        }
-        fluid(maxWidth: 300){
-          ...GatsbyContentfulFluid
-        }
-      }
-      featuredImage {
-        fixed (width: 300) {
-          ...GatsbyContentfulFixed
-        }
-        fluid(maxWidth: 200){
-          ...GatsbyContentfulFluid
-        }
-      }
-      description {
-        json
-      }
-    }
   }
 `
 
@@ -86,7 +62,7 @@ const ProductDetail = (props) =>{
   function handleGallery(settings){
     return(
       <Carousel {...settings}>
-        {props.data.contentfulProduct.gallery.map((item)=>{
+        {props.data.contentfulProductsSubcategories.gallery.map((item)=>{
           return(
             <Img fixed={item.fixed} fluid={item.fluid} alt="" />
           )
@@ -99,8 +75,8 @@ const ProductDetail = (props) =>{
     return(
       <ImageContainer>
         <Img 
-          fixed={(props.data.contentfulProduct.featuredImage) != null ? props.data.contentfulProduct.featuredImage.fixed : props.data.contentfulAsset.fixed }  
-          fluid={(props.data.contentfulProduct.featuredImage) != null ? props.data.contentfulProduct.featuredImage.fluid : props.data.contentfulAsset.fluid }
+          fixed={(props.data.contentfulProductsSubcategories.featuredImage) != null ? props.data.contentfulProductsSubcategories.featuredImage.fixed : props.data.contentfulAsset.fixed }  
+          fluid={(props.data.contentfulProductsSubcategories.featuredImage) != null ? props.data.contentfulProductsSubcategories.featuredImage.fluid : props.data.contentfulAsset.fluid }
           alt=""/>
       </ImageContainer>
     )
@@ -119,11 +95,11 @@ const ProductDetail = (props) =>{
               </Link>
             </CloseButton>
             <ContentWrapper>
-              {props.data.contentfulProduct.gallery != null ? handleGallery(carouselSettings): handleFeaturedImage()}
+              {props.data.contentfulProductsSubcategories.gallery != null ? handleGallery(carouselSettings): handleFeaturedImage()}
               
               <Content>
-                <h1>{props.data.contentfulProduct.name}</h1>
-                {documentToReactComponents(props.data.contentfulProduct.description.json)}
+                <h1>{props.data.contentfulProductsSubcategories.name}</h1>
+                {documentToReactComponents(props.data.contentfulProductsSubcategories.description.json)}
                 <a href="tel:+9789963203">Order Now</a>
               </Content>
             </ContentWrapper>

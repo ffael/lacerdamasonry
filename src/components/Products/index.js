@@ -9,16 +9,17 @@ const Products = () => {
 
   const data = useStaticQuery(graphql`
     query{
-      allContentfulProduct(limit: 4, filter: {homePageFeatured: {eq: true}}) {
+      contentfulAsset(file: {fileName: {eq: "missing.jpg"}}) {
+        fixed(width:230) {
+          ...GatsbyContentfulFixed
+        }
+      }
+      allContentfulProduct(limit: 4, filter: {homePageFeatured: {eq: true}}, sort: {order: ASC, fields: updatedAt}) {
         edges {
           node {
             name
             id
             slug
-            homePageFeatured
-            description {
-              description
-            }
             featuredImage {
               fixed(width: 230){
                 ...GatsbyContentfulFixed
@@ -42,7 +43,7 @@ const Products = () => {
               }}>
                 <Card>
                   <CardContent>
-                    <Img fixed={edge.node.featuredImage.fixed} alt={edge.node.name}/>
+                    <Img fixed={(edge.node.featuredImage) !== null ? edge.node.featuredImage.fixed : data.contentfulAsset.fixed } alt={edge.node.name}/>
                     <p>{edge.node.name}</p>
                   </CardContent>
                 </Card>

@@ -1,5 +1,34 @@
 import styled from 'styled-components'
 
+export const BreadCrumbs = styled.section`
+  display:flex;
+  flex-direction: column;
+  padding: 2rem;
+  background: #fafafa;
+  
+  a{
+    width: 220px;
+    padding: 0 20px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #00A3DD;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+
+    &:hover{
+      color: #fff;
+      background: #00A3DD;
+    }
+  }
+
+  h3{
+    font-size: 2.5rem;
+    color: #132554;
+    border-left: 5px solid #132554;
+    padding-left: 1.5rem;
+    margin: 5px 0 0 0;
+  }
+`
 export const Container = styled.section`
   display: flex;
   padding-bottom: 5%;

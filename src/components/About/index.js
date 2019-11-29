@@ -44,7 +44,7 @@ const About = () =>{
           <Card>
             <h3>Fabio Lacerda</h3>
             <strong>Founder & Owner</strong>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias placeat aliquid hic nam, eius voluptatum quis et fuga enim odit optio reprehenderit aut rem ipsum corporis. Amet expedita consequuntur obcaecati.</p>
+            <p>I believe good products and services can be provided for a reasonable and accessible price and we are proud to be able to offer that to our clients and friends.</p>
           </Card>
         </ProfileContainer>
       </Container>

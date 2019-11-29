@@ -8,6 +8,11 @@ import Img from 'gatsby-image'
 const ProductsContent = () => {
   const data = useStaticQuery(graphql`
     query{
+      contentfulAsset(file: {fileName: {eq: "missing.jpg"}}) {
+        fixed(width:230){
+          ...GatsbyContentfulFixed
+        }
+      }
       allContentfulProduct{
         edges{ 
           node{
@@ -32,11 +37,11 @@ const ProductsContent = () => {
             {data.allContentfulProduct.edges.map((edge)=>{
               return(
                 <Link to={`/products/${edge.node.slug}`} state={{
-                  modal: true
+                  modal: edge.node.slug.endsWith('pavers') ? false : true
                 }} key={edge.node.id}>
                   <Card>
                     <CardContent>
-                      <Img fixed={edge.node.featuredImage.fixed} alt={edge.node.name}/>
+                      <Img fixed={(edge.node.featuredImage) != null ? edge.node.featuredImage.fixed : data.contentfulAsset.fixed } alt={edge.node.name}/>
                       <p>{edge.node.name}</p>
                     </CardContent>
                   </Card>

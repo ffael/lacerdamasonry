@@ -5,13 +5,10 @@ import { Link, useStaticQuery, graphql } from 'gatsby'
 // import LogoIcon from '../SVG/logoIcon'
 import {
   FaFacebook,
-  FaInstagram,
-  FaYelp,
   FaWhatsapp,
   FaFacebookMessenger,
   FaMapMarkerAlt,
   FaPhone,
-  FaEnvelopeOpenText
 } from 'react-icons/fa'
 
 const Footer = () => {
@@ -81,9 +78,6 @@ const Footer = () => {
           <li>
             <FaPhone fill={"#fff"}/> <a href="tel:9789963203"><span>(978) 996-3203</span></a>
           </li>
-          {/* <li>
-            <FaEnvelopeOpenText fill={"#fff"}/> <a href="mailto:contact@lacerdamasonry.com"><span>contact@lacerdamasonry.com</span></a>
-          </li> */}
         </ul>
       </Box>
     </Container>
@@ -94,8 +88,6 @@ const Footer = () => {
       <div>
         <a href="https://www.facebook.com/Lacerda-Masonry-Company-Inc-Masonry-and-Landscape-supplier-103756151010629/" aria-label="Check our Facebook Page" target="_blank" rel="noopener noreferrer"><FaFacebook  size={20} fill={"#fff"}/></a>
         <a href="https://m.me/103756151010629" aria-label="Send us a message on Facebook Messenger" target="_blank" rel="noopener noreferrer"><FaFacebookMessenger  size={20} fill={"#fff"}/></a>
-        {/* <a href="https://www.instagram.com/" aria-label="Follow us on Instagram" target="_blank" rel="noopener noreferrer"><FaInstagram size={20} fill={"#fff"}/></a> */}
-        {/* <a href="https://www.yelp.com/" aria-label="Rate us on Yelp" target="_blank" rel="noopener noreferrer"><FaYelp size={20} fill={"#fff"}/></a> */}
         <a href="https://www.whatsapp.com/business/" aria-label="Get in touch with us on WhatsApp Business" target="_blank" rel="noopener noreferrer"><FaWhatsapp size={20} fill={"#fff"}/></a>
       </div>
     </Social>

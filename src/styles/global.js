@@ -92,7 +92,7 @@ export default createGlobalStyle`
       margin: 0 auto !important;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      max-width: 1600px;
+      /* max-width: 1600px; */
   }
   article,
   aside,
